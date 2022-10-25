@@ -1,17 +1,19 @@
-ARG BASE_IMAGE=debian:11.5-slim@sha256:5cf1d98cd0805951484f33b34c1ab25aac7007bb41c8b9901d97e4be3cf3ab04
+ARG BASE_IMAGE=senzing/senzing-base
 FROM ${BASE_IMAGE}
 
-ENV REFRESHED_AT=2022-09-27
+ENV REFRESHED_AT=2022-10-25
 
-LABEL Name="senzing/template" \
+LABEL Name="senzing/senzing-listener-example" \
       Maintainer="support@senzing.com" \
-      Version="1.3.2"
+      Version="0.0.1"
 
 HEALTHCHECK CMD ["/app/healthcheck.sh"]
 
 # Run as "root" for system installation.
 
 USER root
+
+ARG MAVEN_VERSION=3.8.6
 
 RUN apt-get update \
  && apt-get -y install \
@@ -27,6 +29,15 @@ RUN pip3 install --upgrade pip \
  && pip3 install -r requirements.txt \
  && rm requirements.txt
 
+# Install OpenJDK-11
+RUN apt-get update  \
+ && apt-get install -y openjdk-11-jre-headless  \
+ && apt-get clean;
+
+RUN curl -O -k https://downloads.apache.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
+ && tar xzvf apache-maven-${MAVEN_VERSION}-bin.tar.gz
+
+
 # Install packages via apt.
 
 # Copy files from repository.
@@ -40,4 +51,4 @@ USER 1001
 # Runtime execution.
 
 WORKDIR /app
-CMD ["/app/sleep-infinity.sh"]
+CMD ["java -jar target/hello-world-app-0.1.jar"]
