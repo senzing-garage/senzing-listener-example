@@ -9,7 +9,7 @@ public class HelloWorldApp {
   public static void main(String[] args) {
     // The required configuration, mq name and the host RabbitMQ runs on.
     // Note: the ini file path needs to be adjusted to match the Senzing G2 installation.
-    String config = "{\"mqQueue\":\"hwqueue\",\"mqHost\":\"localhost\",\"mqUser\":\"user\",\"mqPassword\":\"bitnami\",\"iniFile\":\"/home/osboxes/senzing/etc/G2Modulebak.ini\"}";
+    String config = "{\"mqQueue\":\"hwqueue\",\"mqHost\":\"localhost\",\"mqUser\":\"user\",\"mqPassword\":\"bitnami\",\"iniFile\":\"/listener/G2EnvModule.ini\"}";
 
     try {
       // Create the service and initialize it.

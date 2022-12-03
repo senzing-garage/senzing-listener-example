@@ -49,18 +49,27 @@ public class G2Service {
     boolean verboseLogging = false;
 
     String configData = null;
+    configData = System.getenv("SENZING_ENGINE_CONFIGURATION_JSON");
+
+    
+/*
     try {
-      configData = getG2IniDataAsJson(iniFile);
+    System.out.println("test line");
+    String configData = null;
+    configData = System.getenv("SENZING_ENGINE_CONFIGURATION_JSON");
     } catch (IOException | RuntimeException e) {
       throw new ServiceSetupException(e);
     }
+    */
     g2Engine = new G2JNI();
     int result = g2Engine.init(moduleName, configData, verboseLogging);
+    /*
     if (result != G2ServiceDefinitions.G2_VALID_RESULT) {
       StringBuilder errorMessage = new StringBuilder("G2 engine failed to initalize with error: ");
       errorMessage.append(g2ErrorMessage(g2Engine));
       throw new ServiceSetupException(errorMessage.toString());
     }
+    */
   }
 
   /**
