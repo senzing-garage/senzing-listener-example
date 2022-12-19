@@ -7,9 +7,15 @@ import com.senzing.listener.service.exception.ServiceSetupException;
 
 public class HelloWorldApp {
   public static void main(String[] args) {
+  
+    //Theses lines are for the docker container configuration to use variables
+    String queueName = System.getenv("SENZING_LISTENER_QUEUE");
+    String queueHost = System.getenv("SENZING_LISTENER_HOST");
+    String password = System.getenv("RABBITMQ_LISTENER_PASSWORD");
+    String user = System.getenv("RABBITMQ_LISTENER_USERNAME");
     // The required configuration, mq name and the host RabbitMQ runs on.
     // Note: the ini file path needs to be adjusted to match the Senzing G2 installation.
-    String config = "{\"mqQueue\":\"hwqueue\",\"mqHost\":\"localhost\",\"mqUser\":\"user\",\"mqPassword\":\"bitnami\",\"iniFile\":\"/listener/G2EnvModule.ini\"}";
+    String config = "{\"mqQueue\":\""+ queueName +"\",\"mqHost\":\""+queueHost+"\",\"mqUser\":\""+user+"\",\"mqPassword\":\""+password+"\"}";
 
     try {
       // Create the service and initialize it.
