@@ -21,7 +21,6 @@ public class HelloWorldApp {
       // Create the service and initialize it.
       ListenerService service = new HelloWorldService();
       // In this simple the initalization is not needed but is included for demonstration purposes.
-      service.init(config);
 
       // Generate the queue consumer.
       MessageConsumer consumer = MessageConsumerFactory.generateMessageConsumer(ConsumerType.RABBIT_MQ, config);
