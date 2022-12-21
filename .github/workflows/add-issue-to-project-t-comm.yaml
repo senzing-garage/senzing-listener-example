@@ -1,7 +1,7 @@
 # Based on
 # - https://github.com/srggrs/assign-one-project-github-action
 
-name: add-issue-to-project-t-gdev.yaml
+name: add-issue-to-project-t-comm.yaml
 on:
   issues:
     types:
@@ -11,11 +11,11 @@ env:
   GITHUB_TOKEN: ${{ secrets.SENZING_GITHUB_ACCESS_TOKEN }}
 jobs:
   assign_one_project:
-    name: Add issue to Senzing Gdev project
+    name: Add issue to Senzing Community project
     runs-on: ubuntu-latest
     steps:
     - name: Assign issue to project
       uses: Senzing/github-action-add-issue-to-project@main
       with:
-        project: 'https://github.com/orgs/Senzing/projects/9'
+        project: 'https://github.com/orgs/Senzing/projects/2'
         column_name: 'Backlog'

@@ -1,0 +1,13 @@
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/com/senzing/listener/service/exception/ServiceSetupException.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/com/senzing/listener/service/g2/G2Service.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/com/senzing/listener/service/ListenerService.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/com/senzing/listener/communication/rabbitmq/RabbitMQConsumer.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/com/senzing/listener/communication/ConsumerType.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/com/senzing/listener/service/exception/ServiceExecutionException.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/com/senzing/listener/communication/MessageConsumerFactory.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/com/senzing/listener/communication/sqs/SQSConsumer.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/HelloWorldApp.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/HelloWorldService.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/com/senzing/listener/communication/MessageConsumer.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/com/senzing/listener/communication/exception/MessageConsumerSetupException.java
+/home/osboxes/senzing.git/senzing-listener-example/rootfs/listener/src/main/java/com/senzing/listener/service/g2/G2ServiceDefinitions.java
