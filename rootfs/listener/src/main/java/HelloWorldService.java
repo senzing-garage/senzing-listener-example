@@ -42,6 +42,8 @@ public class HelloWorldService implements ListenerService {
             Long entityID = entity.getLong("ENTITY_ID");
             String entityData = g2Service.getEntity(entityID, false, false);
             System.out.println("G2 entity:");
+            G2EntitySearchData parser = new G2EntitySearchData();
+            parser.ParseJson(entityData);
             System.out.println(entityData);
           }
         }

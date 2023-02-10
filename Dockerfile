@@ -13,7 +13,7 @@ HEALTHCHECK CMD ["/app/healthcheck.sh"]
 
 USER root
 
-ARG MAVEN_VERSION=3.8.6
+ARG MAVEN_VERSION=3.6.3
 
 RUN apt-get update \
  && apt-get -y install \

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-mvn install
+mvn clean install
 
 java -jar target/hello-world-app-0.1.jar
