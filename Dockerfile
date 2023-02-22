@@ -1,7 +1,7 @@
 ARG BASE_IMAGE=senzing/senzingapi-runtime:3.3.1
 FROM ${BASE_IMAGE}
 
-ENV REFRESHED_AT=2022-10-25
+ENV REFRESHED_AT=2023-02-19
 
 LABEL Name="senzing/senzing-listener-example" \
       Maintainer="support@senzing.com" \
@@ -13,7 +13,7 @@ HEALTHCHECK CMD ["/app/healthcheck.sh"]
 
 USER root
 
-ARG MAVEN_VERSION=3.6.3
+ARG MAVEN_VERSION=3.8.7
 
 RUN apt-get update \
  && apt-get -y install \
