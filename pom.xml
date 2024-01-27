@@ -25,7 +25,7 @@
   <repositories>
     <repository>
       <id>listener-repo</id>
-      <url>http://github.com/Senzing/senzing-listener</url>
+      <url>https://github.com/senzing-garage/senzing-listener</url>
       <releases>
         <enabled>true</enabled>
       </releases>
